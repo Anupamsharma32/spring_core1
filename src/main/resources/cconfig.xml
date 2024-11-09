@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="empBean" class="com.example.demo.collections.Emp">
+        <property name="name" value="John Doe"/>
+        <property name="phones">
+            <list>
+                <value>1234567890</value>
+                <value>0987654321</value>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>123 Main St</value>
+                <value>456 Park Ave</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java" value="Beginner"/>
+                <entry key="Spring" value="Intermediate"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
