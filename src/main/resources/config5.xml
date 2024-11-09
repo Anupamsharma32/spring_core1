@@ -10,16 +10,12 @@
 		https://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
     <!-- bean definitions here this is our bean-->
-    <bean class="com.springcore.ref.B " name="bref">
-        <property name="y" value="90"/>
+    <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
+        <property name="price" value="10"/>
 
     </bean>
-<!--    <bean class="com.springcore.ref.A" name="aref">-->
-<!--        <property name="x" value="28"/>-->
-<!--        <property name="ob">-->
-<!--          <ref bean="bref"/>-->
-<!--        </property>-->
-<!--    </bean>-->
-<!--    also we can write it as p schema-->
-    <bean class="com.springcore.ref.A" name="aref" p:x="33" p:ob-ref="bref"/>
+    <bean class="com.springcore.lifecycle.Pepsi" name="p1">
+        <property name="price" value="5"/>
+
+    </bean>
 </beans>
