@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/jdbc
+           https://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/util
+           https://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--Stand alone list  - we can use it anywhere since we are declaring this outside i will use that with the help of id-->
+   <util:list list-class="java.util.LinkedList" id="mybestfriends">
+       <value>Mandeep</value>
+       <value>Mandeep</value>
+       <value>Mandeep</value>
+       <value>mandeep</value>
+
+   </util:list>
+<!--    standalone list-->
+
+    <!-- Bean definitions -->
+    <bean class="com.springcore.standalone.collection.Person" name="person1">
+<!--        <property name="friends">-->
+<!--         <ref bean="mybestfriends"/>-->
+<!--        </property>-->
+        <property name="friends" ref="mybestfriends"/>
+
+    </bean>
+
+</beans>

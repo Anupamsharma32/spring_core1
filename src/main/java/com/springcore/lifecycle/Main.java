@@ -17,6 +17,11 @@ public class Main {
         Pepsi pepsi=(Pepsi) applicationContext.getBean("p1");
         System.out.println(pepsi);
 
+        System.out.println("*********************");
+        AbstractApplicationContext applicationContext1=new ClassPathXmlApplicationContext("config6.xml");
+        Example example=(Example)applicationContext1.getBean("example");
+        System.out.println(example);
+
 
     }
 }
